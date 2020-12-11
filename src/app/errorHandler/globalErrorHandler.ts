@@ -1,8 +1,13 @@
-import {ErrorHandler} from '@angular/core';
+import {ErrorHandler, Injectable} from '@angular/core';
 import {_ErrorHandler} from './errorHandler';
+import {MessageService} from 'primeng/api';
 
+@Injectable({
+  providedIn:MessageService
+})
 export class GlobalErrorHandler implements ErrorHandler {
   handleError(error: Error): void {
-    new _ErrorHandler(error);
+    alert('global error')
+    console.log(error);
   }
 }

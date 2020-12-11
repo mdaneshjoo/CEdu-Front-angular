@@ -2,9 +2,7 @@ import {HttpErrorResponse} from '@angular/common/http';
 import {MessageService} from 'primeng/api';
 
 export class _ErrorHandler {
-  private messageService=new MessageService();
-
-  constructor(e) {
+  constructor(e, private messageService?: MessageService) {
     this.httpErrorResponse(e);
   }
 
@@ -12,8 +10,8 @@ export class _ErrorHandler {
     if (e instanceof HttpErrorResponse) {
       this.messageService.add({
         severity: 'error',
-        summary: 'Authentication Failed',
-        detail: 'API Key or URL is invalid.',
+        summary: `${e.error['status'].toUpperCase()}-${e.error['code']}`,
+        detail: e.error['message'],
       });
       console.log(e.error);
     }
