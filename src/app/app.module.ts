@@ -9,8 +9,6 @@ import {AuthModule} from './auth/auth.module';
 import {HttpClientModule} from '@angular/common/http';
 import {GlobalErrorHandler} from './errorHandler/globalErrorHandler';
 import {ToastModule} from 'primeng/toast';
-import {MessageModule} from 'primeng/message';
-import {MessagesModule} from 'primeng/messages';
 import {MessageService} from 'primeng/api';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
