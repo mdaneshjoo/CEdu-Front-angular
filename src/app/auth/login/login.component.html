@@ -1,3 +1,25 @@
-<p>login works!</p>
 <p-toast></p-toast>
-<button (click)="showtoast()" > login</button>
+<div class="p-d-flex container ">
+  <div class="p-grid  p-shadow-5 grid">
+    <div class="p-col p-lg-9 p-shadow-2 login">
+      <div class="p-field p-fluid loginContent">
+        <label for="userName">Username</label>
+        <input id="userName" type="userName" pInputText >
+
+        <label for="email">Email</label>
+        <input id="email" type="email" pInputText >
+
+        <label for="phoneNumber">Phone Number</label>
+        <p-inputMask id="phoneNumber" mask="(999) 999-9999"></p-inputMask>
+
+        <label for="password">Password</label>
+        <input id="password" type="password" pPassword />
+
+      </div>
+
+      <button pButton type="button" label="Login" class="p-button-raised " (click)="logIn()"></button>
+    </div>
+  </div>
+</div>
+
+

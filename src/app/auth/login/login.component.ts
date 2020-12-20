@@ -3,8 +3,6 @@ import {AuthService} from '../../services/auth.service';
 import {MessageService} from 'primeng/api';
 import {Router} from '@angular/router';
 import {_ErrorHandler} from '../../errorHandler/errorHandler';
-import {en} from '../../../languages/en';
-import {Observable,throwError} from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -23,7 +21,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  showtoast() {
+  logIn() {
     this.authService.login({
       userName: 'emdjoo',
       password: '89080'
